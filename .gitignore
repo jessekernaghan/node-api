@@ -1,0 +1,16 @@
+*.log
+node_modules
+.npm
+.eslintcache
+.yarn-integrity
+.DS_Store
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+dist
+
+.vscode
+.idea
