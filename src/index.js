@@ -1,11 +1,11 @@
 // @flow
-import nconf from "nconf";
+import config from "./config";
+
 import express from "express";
 import cors from "cors";
 
 const app = express();
 
-nconf.argv().env();
 app.use(cors({}));
 
 
@@ -15,5 +15,5 @@ app.use("/", function(req,res) {
 
 
 app.listen(process.env.PORT, () => {
-  console.log('app listening');
+  console.log(`app listening on port: ${process.env.PORT || 'unknown'}`);
 });
