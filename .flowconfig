@@ -7,8 +7,7 @@
 <PROJECT_ROOT>/server.js
 
 [libs]
-flow-typed
+flow-typed/.*
 
 [options]
-all=true
 emoji=true
