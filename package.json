@@ -7,7 +7,10 @@
     "test": "jest",
     "build": "babel ./src --out-dir ./dist --ignore '**/*.spec.js'",
     "watch": "nodemon --exec babel-node -- src/index.js",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "sandbox": "nodemon --exec babel-node -- src/sandbox.js",
+    "migration:create": "node migrations/bin/create.js",
+    "migration:run":"node migrations/bin/migrate.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +37,9 @@
     "cors": "^2.8.5",
     "dotenv": "^6.1.0",
     "express": "^4.16.4",
-    "helmet": "^3.15.0"
+    "helmet": "^3.15.0",
+    "pg": "^7.7.1",
+    "uuid": "^3.3.2"
   },
   "engines": {
     "node": "8.10.0"
